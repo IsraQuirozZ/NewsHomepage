@@ -34,7 +34,7 @@
     <header class="header">
         <img src="./assets/images/logo.svg" alt="Logo" />
         <img class="menu" src="./assets/images/icon-menu.svg" alt="menu" />
-        <img class="menuClose hidden" src="./assets/images/icon-menu-close.svg" alt="menu" />
+        <img class="menuClose" src="./assets/images/icon-menu-close.svg" alt="menu" />
         <nav class="nav hidden">
             <ul>
                 <li><a href="#">Home</a></li>
@@ -124,12 +124,12 @@
         const nav = document.querySelector(".nav");
         menu.addEventListener("click", () => {
             menu.classList.toggle("hidden");
-            menuClose.classList.toggle("hidden");
+            menuClose.classList.toggle("visible");
             nav.classList.toggle("hidden");
         });
 
         menuClose.addEventListener("click", () => {
-            menuClose.classList.toggle("hidden");
+            menuClose.classList.toggle("visible");
             menu.classList.toggle("hidden");
             nav.classList.toggle("hidden");
         });
