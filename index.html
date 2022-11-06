@@ -33,7 +33,9 @@
 <body>
     <header class="header">
         <img src="./assets/images/logo.svg" alt="Logo" />
-        <nav>
+        <img class="menu" src="./assets/images/icon-menu.svg" alt="menu" />
+        <img class="menuClose hidden" src="./assets/images/icon-menu-close.svg" alt="menu" />
+        <nav class="nav hidden">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">New</a></li>
@@ -115,6 +117,23 @@
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a
       >. Coded by <a href="#">IsraQuirozZ</a>.
     </div>
+
+    <script>
+        const menu = document.querySelector(".menu");
+        const menuClose = document.querySelector(".menuClose");
+        const nav = document.querySelector(".nav");
+        menu.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+            menuClose.classList.toggle("hidden");
+            nav.classList.toggle("hidden");
+        });
+
+        menuClose.addEventListener("click", () => {
+            menuClose.classList.toggle("hidden");
+            menu.classList.toggle("hidden");
+            nav.classList.toggle("hidden");
+        });
+    </script>
 </body>
 
 </html>
